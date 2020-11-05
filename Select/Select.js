@@ -25,6 +25,9 @@ class Select {
       optionEl.onclick = () => {
         placeholderSpan.innerHTML = option.text || "Error"
         placeholderSpan.dataset.value = option.value || `error(${i})`
+
+        el.dispatchEvent(new Event("input"))
+        el.dispatchEvent(new Event("change"))
       }
 
       optionsDiv.append(optionEl)
