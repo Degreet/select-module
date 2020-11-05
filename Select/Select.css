@@ -1,0 +1,64 @@
+.Select-menu,
+.Select-menu .options.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.Select-menu {
+  position: relative;
+  padding: 10px 12px;
+}
+
+.Select-menu .placeholder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 99%;
+}
+
+.Select-menu .placeholder i {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.Select-menu .options {
+  position: absolute;
+  opacity: 0;
+}
+
+.Select-menu .options .option {
+  position: absolute;
+}
+
+.Select-menu .options.show {
+  width: 100%;
+  top: 100%;
+  opacity: 1;
+  padding: 10px 0;
+}
+
+.Select-menu .options.show ~.placeholder i {
+  transform: rotate(180deg);
+}
+
+.Select-menu .options.show .option {
+  position: relative;
+  width: 100%;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.Select-menu .options.show .option:hover {
+  background: #dbdbdb;
+}
+
+.Select-menu .options.show .option:not(:first-child) {
+  margin-top: 5px;
+}
